@@ -1,0 +1,22 @@
+<%= render 'flash' %>
+<h1>New Ticket</h1>
+<div class="form">
+  <%= form_for @ticket do |f| %>
+    <div class="form-group">
+      <%= f.label :payload %>
+      <small>Sample format: 
+        {
+          "user_id" : 1234,
+          "title" : "My title",
+          "tags" : ["tag1", "tag2"]
+        }
+      </small>
+      <%= f.text_area :payload, class: 'form-control', required: true, rows: 10 %>
+    </div>
+
+    <div class="form__actions">
+      <%= button_tag 'Save', class: 'button' %>
+      <%= link_to 'Go to Listing', root_path, class: 'button button--blue' %>
+    </div>
+  <% end %>
+</div>

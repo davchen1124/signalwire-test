@@ -1,0 +1,14 @@
+footer {
+  background-color: #F3F9FB;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}

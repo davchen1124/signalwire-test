@@ -1,0 +1,13 @@
+.siteHeader {
+  text-align: center;
+  padding: 20px 0;
+
+  .logo {
+    display: inline-block;
+    background: black;
+    svg {
+      width: 150px;
+      height: 30px;
+    }
+  }
+}

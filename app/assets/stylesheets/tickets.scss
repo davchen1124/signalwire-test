@@ -1,0 +1,151 @@
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.tickets__list {
+  margin-top: 20px;
+}
+
+.table__tickets {
+  margin-top: 20px;
+}
+
+.table__header {
+  display: flex;
+}
+
+.table__header-colgroup {
+  flex: 1;
+}
+
+.table__header-col {
+  background-color: rgba(245,74,92,0.0509804);
+  padding: 10px 20px;
+  color: #D42F41;
+  border: 1px solid #DFE3E6;
+}
+
+.table__header-actions {
+  width: 320px;
+}
+
+.table__row {
+  display: flex;
+}
+
+.table__row-colgroup {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  flex: 1;
+}
+
+.table__row-col {
+  display: flex;
+  border: 1px solid #DFE3E6;
+  word-break: break-all;
+  
+  strong {
+    background-color: rgba(245,74,92,0.0509804);
+    display: none;
+    width: 150px;
+    padding: 10px 20px;
+  }
+
+  span {
+    flex: 1;
+    padding: 10px 20px;
+  }
+}
+
+.table__row-actions {
+  width: 320px;
+  justify-content: center;
+}
+
+.table__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+
+  .button {
+    margin: 5px 10px;
+  }
+}
+
+.form__actions {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: -10px;
+  margin-right: -10px;
+
+  .button {
+    margin: 0 10px;
+  }
+}
+
+.shortlink__details {
+  border: 1px solid #DFE3E6;
+
+  dl {
+    display: flex;
+    border-bottom: 1px solid #DFE3E6;
+    margin: 0;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  dt {
+    margin: 0;
+    width: 150px;
+    padding: 20px 10px;
+  }
+
+  dd {
+    margin: 0;
+    flex: 1;
+    padding: 20px 10px;
+    word-break: break-all;
+  }
+}
+
+.empty__tickets {
+  margin-top: 40px;
+  background-color: #e1f0fa;
+  padding: 40px;
+  border-top: 4px solid #2f77b0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .table__header {
+    display: none;
+  }
+
+  .table__row {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .table__row-colgroup {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table__row-col {
+    width: 100%;
+    text-align: center;
+
+    strong {
+      display: block;
+    }
+  }
+
+  .table__row-actions {
+    justify-content: center;
+  }
+}

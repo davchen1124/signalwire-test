@@ -1,0 +1,15 @@
+.flash {
+  padding: 10px 40px;
+  background-color: #c5f6e1;
+  border: 1px solid #c2cbd0;
+  color: #152935;
+
+  p {
+    margin: 0;
+  }
+
+  &.alert {
+    background-color: #D42F41;
+    color: #ffffff;
+  }
+}

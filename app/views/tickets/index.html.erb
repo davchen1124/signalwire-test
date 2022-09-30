@@ -1,0 +1,52 @@
+<%= render 'flash' %>
+<h1>Listing Tickets</h1>
+
+<%= link_to 'Add Ticket', new_ticket_path, class: 'button' %>
+<% if @tickets.any? %>
+  <!-- Didn't use table for mobile response -->
+  <div class="table table__tickets">
+    <div class="table__header">
+      <div class="grid table__header-colgroup">
+        <div class="table__header-col col-span-1">#</div>
+        <div class="table__header-col col-span-2">User ID</div>
+        <div class="table__header-col col-span-2">Title</div>
+        <div class="table__header-col col-span-2">Received at</div>
+        <div class="table__header-col col-span-5">Webhook URL</div>
+      </div>
+    </div>
+    <div class="table__body">
+      <% @tickets.each_with_index do |ticket, index| %>
+        <div class="table__row">
+          <div class="table__row-colgroup">
+            <div class="table__row-col col-span-1">
+              <strong>#</strong>
+              <span><%= index + 1 %></span>
+            </div>
+            <div class="table__row-col col-span-2">
+              <strong>User ID</strong>
+              <span><%= ticket.user_id %></span>
+            </div>
+            <div class="table__row-col col-span-2">
+              <strong>Title</strong>
+              <span><%= ticket.title %></span>
+            </div>
+            <div class="table__row-col col-span-2">
+              <strong>Title</strong>
+              <span><%= ticket.created_at %></span>
+            </div>
+            <div class="table__row-col col-span-5">
+              <strong>Title</strong>
+              <span><%= ticket.webhook_url %></span>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div>
+  </div>
+<% else %>
+  <div class="empty__tickets">
+    <span class="text-info font-weight-bold">Welcome! </span>
+    Create your first ticket
+  </div>
+<% end %>
