@@ -46,6 +46,9 @@ class Ticket < ApplicationRecord
   end
 
   def generate_webhook_url
+    # max_count = Tag.maximum(:count)
+    # tags = Tag.where(count: max_count)
+    # query_string = {tag_name: tags.pluck(:name), tag_count: tags.pluck(:count)}.to_query
     tag = Tag.order(:count).last
     query_string = {tag_name: tag&.name, tag_count: tag&.count}.to_query
     self.webhook_url = [WEBHOOK_ENDPOINT, CGI.unescape(query_string)].join '?'

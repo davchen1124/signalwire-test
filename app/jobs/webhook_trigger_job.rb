@@ -7,5 +7,6 @@ class WebhookTriggerJob < ApplicationJob
     uri = URI(ticket.webhook_url)
     res = Net::HTTP.get_response(uri)
     # some more process from webhook response
+    # ...
   end
 end
